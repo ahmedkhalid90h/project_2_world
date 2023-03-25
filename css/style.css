@@ -1,0 +1,872 @@
+/* Start Global Rules */
+:root {
+    --first-color: #8d8d8d;
+    --second-color: #0000ff;
+    --margin-top: 7%;
+}
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 0 15px;
+}
+@media (min-width: 576px) {
+    .container {
+        width: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Global Rules */
+/* Start Navbar */
+nav {
+    background-image: url(../imgs/xbg2.jpg.pagespeed.ic.QoUnFCtMkz.webp);
+    position: relative;
+    background-size: cover;
+}
+nav::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0 0 0 / 60%);
+    width: 100%;
+    height: 100%;
+}
+nav .content {
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+nav .content .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 40%;
+    width: 100%;
+    padding: 3% 1% 1%;
+    position: relative;
+    z-index: 999;
+}
+nav .content .header .logo {
+    font-family: 'Ubuntu', sans-serif;
+    color:#fff;
+    font-weight: bold;
+    font-size: 23px;
+    cursor: pointer;
+}
+nav .content .header .burger {
+    display: none;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 25px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+nav .content .header ul li {
+    display: inline-block;
+    margin-right: 25px
+}
+nav .content .header ul li a {
+    color: #8d8d8d;
+    transition: color .5s;
+}
+nav .content .header ul li a.active {
+    color: #fff;
+}
+nav .content .header ul li a:hover {
+    color: #fff;
+}
+nav .content .header ul i.search {
+    color: #8d8d8d;
+    font-size: 20px;
+    cursor: pointer;
+}
+nav .content .small-content {
+    display: flex;
+    justify-content: space-between;
+    color: #8d8d8d;
+    z-index: 1;
+    margin-bottom: 3%;
+}
+nav .content .small-content > div {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav .content .small-content > div span.active {
+    border: 5px solid #0000ff;
+    border-left: 5px solid #8d8d8d;
+}
+nav .content .small-content > div span {
+    width: 60px;
+    height: 60px;
+    border: 5px solid #8d8d8d;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 500;
+}
+nav .content .small-content > div p {
+    font-size: 13px;
+    font-weight: bold;
+    width: 70%;
+    cursor: pointer;
+}
+nav .content .small-content > div p.active {
+    color: #fff;
+}
+@media (max-width: 991px) {
+    nav .content .header .burger {
+        display: block;
+        transition: .5s;
+    }
+    nav .content .header .burger:hover + ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 90%;
+        transform: translateX(-50%);
+        left: 50%;
+        background-color: #000;
+    }
+    nav .content .header .burger:hover + ul i {
+        display: block;
+        padding: 10px;
+    }
+    nav .content .header ul {
+        display: none;
+    }
+    nav .content .header ul li {
+        padding: 10px;
+    }
+    nav .content .header ul .search {
+        display: none;
+    }
+}
+@media (max-width: 767px) {
+    nav .content .small-content > div {
+        width: 100%;
+    }
+    nav .content .small-content > div:not(:nth-child(2)) {
+        display: none;
+    }
+}
+/* End Navbar */
+/* Start Section One  */
+.section-one {
+    margin-top: var(--margin-top);
+}
+.section-one main {
+    display: flex;
+    justify-content: space-between;
+}
+.section-one main section.up {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #eee;
+    padding: 1% 0;
+}
+.section-one main section.up .mini-logo {
+    font-weight: 500;
+    width: 25%;
+}
+.section-one main section.up ul li {
+    display: inline-block;
+}
+.section-one main section.up ul li a {
+    color: var(--first-color);
+    font-size: 15px;
+    margin-right: 15px;
+    transition: .5s;
+    position: relative;
+}
+.section-one main section.up ul li a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -13px;
+    width: 20px;
+    height: 2px;
+    background-color: var(--second-color);
+}
+.section-one main section.up ul li a.active,
+.section-one main section.up ul li a:hover  {
+    color: #000;
+}
+.section-one main .sections {
+    width: 65%;
+}
+.section-one main section.down {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 4%;
+}
+.section-one main section.down .card-one {
+    width: 48%;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #ddd;
+}
+.section-one main section.down .card-one .img {
+    position: relative;
+}
+.section-one main section.down .card-one img {
+    width: 100%;
+}
+.section-one main section.down .card-one .img p {
+    position: absolute;
+    left: 25px;
+    top: 15px;
+    color: var(--second-color);
+    font-size: 11px;
+    background-color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: .5s;
+}
+.section-one main section.down .card-one .img p:hover {
+    color: #fff;
+    background-color: var(--second-color);
+}
+.section-one main section.down .card-one h3 {
+    font-weight: 600;
+    margin: 5%;
+    cursor: pointer;
+}
+.section-one main section.down .card-one h3 + p {
+    margin: 5%;
+    color: #ccc;
+    font-size: 15px;
+}
+.section-one main section.down .card-one h3 + p + p {
+    margin: 5%;
+    color: var(--first-color);
+    font-size: 13px;
+}
+.section-one main section.down .card-one h3 + p + p span {
+    transition: .5s;
+    cursor: pointer;
+}
+.section-one main section.down .card-one h3 + p + p span:hover {
+    color: var(--second-color);
+}
+.section-one main section.down .cards {
+    width: 48%;
+}
+.section-one main section.down .cards .card-st {
+    display: flex;
+    margin-bottom: 5px;
+    box-shadow: 0px 0px 10px #ddd;
+}
+.section-one main section.down .cards .card-st div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 15px;
+}
+.section-one main section.down .cards .card-st div p:first-child {
+    font-weight: 500;
+    cursor: pointer;
+}
+.section-one main section.down .cards .card-st div p:last-child {
+    font-size: 12px;
+    color: var(--first-color);
+}
+.section-one main section.down .cards .card-st div p:last-child span {
+    transition: .5s;
+    cursor: pointer;
+}
+.section-one main section.down .cards .card-st div p:last-child span:hover {
+    color: var(--second-color);
+}
+.section-one main section.very-down {
+    margin-top: 4%;
+}
+.section-one main section.very-down > div {
+    display: flex;
+    justify-content: space-evenly;
+    width: 15%;
+}
+.section-one main section.very-down > div > i {
+    color: #ddd;
+    font-size: 20px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .5s;
+}
+.section-one main section.very-down > div > i:hover {
+    color: #fff;
+    background-color: var(--second-color);
+    border: 2px solid var(--second-color);
+}
+.section-one main section.very-down + .up {
+    margin-top: var(--margin-top);
+}
+.section-one main section.very-down + .up + .down .cards {
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+.section-one main section.very-down + .up + .down .cards .card-st {
+    width: 48%;
+}
+.section-one main aside {
+    width: 30%;
+}
+.section-one main aside h3.title {
+    font-weight: 600;
+    border-left: 2px solid #ddd;
+}
+.section-one main aside h3.title,
+.section-one main aside h3.title + p {
+    padding: 10px 30px;
+    border-bottom: 2px solid #ddd;
+    width: 100%;
+}
+.section-one main aside h3.title + p {
+    font-size: 15px;
+    color: var(--first-color);
+    padding-right: 0;
+    line-height: 1.4;
+    border-left: 2px solid #ddd;
+}
+.section-one main aside .again {
+    padding: 30px 0px 30px 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border-bottom: 2px solid #ddd;
+    border-left: 2px solid #ddd;
+}
+.section-one main aside .again .card {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #ddd;
+    margin-bottom: 5px;
+}
+.section-one main aside .card img {
+    width: 25%;
+}
+.section-one main aside .card img + div {
+    width: 70%;
+}
+.section-one main aside .card img + div > p {
+    margin-top: 22px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%
+}
+.section-one main aside .icons {
+    padding: 30px 0px 30px 30px;
+    border-bottom: 2px solid #ddd;
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--first-color);
+    font-size: 13px;
+    border-left: 2px solid #ddd;
+}
+.section-one main aside .icons i {
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-one main aside .small-card {
+    padding: 30px 0px 10px 30px;
+    border-left: 2px solid #ddd;
+}
+.section-one main aside .small-card img {
+    width: 100%;
+}
+.section-one main aside .small-card p {
+    padding: 25px 0;
+    font-weight: 500;
+}
+@media (max-width: 991px) {
+    .section-one main {
+        display: flex;
+        flex-direction: column;
+    }
+    .section-one main .sections {
+        width: 100%;
+    }
+    .section-one main section.up .mini-logo {
+        width: 23%;
+    }
+    .section-one main aside {
+        width: 65%;
+        margin: var(--margin-top) auto;
+    }
+}
+@media (max-width: 767px) {
+    .section-one main section.up .mini-logo {
+        font-size: 15px;
+        width: 24%;
+        font-size: 15px;
+        margin-right: 10px;
+    }
+    .section-one main section.up ul li a {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .section-one main section.up ul li a.active::after {
+        display: none;
+    }
+    .section-one main section.down .card-one {
+        width: 80%;
+        margin: auto;
+    }
+    .section-one main section.down .cards {
+        width: 80%;
+        margin: auto;
+    }
+    .section-one main section.very-down > div {
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .section-one main section.very-down + .up + .down .cards .card-st {
+        width: 80%;
+        margin: auto;
+    }
+}
+@media (max-width: 575px) {
+    .section-one main section.up .mini-logo {
+        font-size: 15px;
+        width: 24%;
+        font-size: 15px;
+        margin-right: 10px;
+    }
+    .section-one main section.up ul li a {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .section-one main section.down .card-one {
+        width: 100%;
+    }
+    .section-one main section.down .cards {
+        width: 100%;
+    }
+    .section-one main section.very-down + .up + .down .cards .card-st {
+        width: 100%;
+    }
+    .section-one main aside {
+        width: 100%;
+    }
+}
+
+/* End Section One  */
+/* Start Journey  */
+.journey {
+    margin-top: var(--margin-top);
+}
+.journey .cards {
+    display: flex;
+    justify-content: space-between;
+}
+.journey .cards .first {
+    background-image: url(../imgs/image9.webp);
+}
+.journey .cards .second {
+    background-image: url(../imgs/image10.webp);
+}
+.journey .cards .third {
+    background-image: url(../imgs/image11.webp);
+}
+.journey .cards .flash-card {
+    background-size: cover;
+    width: 31%;
+    position: relative;
+}
+.journey .cards .flash-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0 0 0 / 60%);
+}
+.journey .cards .flash-card > p {
+    z-index: 3;
+    position: relative;
+}
+.journey .cards .flash-card p:first-child{
+    color: var(--second-color);
+    font-size: 11px;
+    background-color: #fff;
+    padding: 5px 10px;
+    transition: .5s;
+    text-align: center;
+    width: 20%;
+    margin: 25px auto;
+    cursor: pointer;
+}
+.journey .cards .flash-card p:first-child:hover {
+    color: #fff;
+    background-color: var(--second-color);
+}
+.journey .cards .flash-card p:nth-child(2) {
+    font-weight: 600;
+    margin: 5%;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+.journey .cards .flash-card P:last-child {
+    font-size: 12px;
+    color: var(--first-color);
+    text-align: center;
+    margin: 5%;
+}
+.journey .cards .flash-card P:last-child span {
+    transition: .5s;
+    cursor: pointer;
+}
+.journey .cards .flash-card P:last-child span:hover {
+    color: var(--second-color);
+}
+@media (max-width: 991px) {
+    .journey .cards {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .journey .cards .flash-card {
+        width: 45%;
+        margin-bottom: 4%;
+    }
+}
+@media (max-width: 767px) {
+    .journey .cards .flash-card {
+        width: 65%;
+    }
+}
+@media (max-width: 575px) {
+    .journey .cards .flash-card {
+        width: 100%;
+    }
+}
+/* End Journey  */
+/* Start Section Two  */
+.section-two {
+    margin-top: var(--margin-top);
+}
+.section-two .content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.section-two .content .mini-logo {
+    font-weight: 500;
+    border-bottom: 2px solid #ddd;
+    padding: 10px 0;
+}
+.section-two .content .aside-left {
+    width: 68%;
+}
+.section-two .content .aside-left .cards {
+    margin-top: 4%;
+}
+.section-two .content .aside-left .cards .card-st {
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #ddd;
+    margin-bottom: 5px;
+}
+.section-two .content .aside-left .cards .card-st img {
+    width: 50%;
+}
+.section-two .content .aside-left .cards .card-st img + div {
+    margin: 30px 80px 20px 30px;
+}
+.section-two .content .aside-left .cards .card-st img + div > p:first-child {
+    font-weight: 500;
+    font-size: 19px;
+}
+.section-two .content .aside-left .cards .card-st img + div > p:nth-child(2) {
+    margin: 2% 0 5%;
+    font-size: 14px;
+    color: var(--first-color);
+}
+.section-two .content .aside-left .cards .card-st img + div > p:last-child {
+    font-size: 12px;
+    color: var(--first-color);
+}
+.section-two .content .aside-left .cards .card-st img + div > p:last-child span {
+    transition: .5s;
+    cursor: pointer;
+}
+.section-two .content .aside-left .cards .card-st img + div > p:last-child span:hover {
+    color: var(--second-color);
+}
+.section-two .content .aside-right {
+    width: 30%;
+}
+.section-two .content .aside-right .cards {
+    margin-top: 9%;
+}
+.section-two .content .aside-right .card {
+    box-shadow: 0px 0px 10px #ddd;
+    margin-bottom: 5px;
+}
+.section-two .content .aside-right .card .img {
+    position: relative;
+}
+.section-two .content .aside-right .card .img img {
+    width: 100%
+}
+.section-two .content .aside-right .card .img p {
+    position: absolute;
+    left: 25px;
+    top: 15px;
+    color: var(--second-color);
+    font-size: 11px;
+    background-color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: .5s;
+}
+.section-two .content .aside-right .card .img p:hover {
+    color: #fff;
+    background-color: var(--second-color);
+}
+.section-two .content .aside-right .card .img i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    cursor: pointer;
+    transition: .5s;
+    color: var(--first-color);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-two .content .aside-right .card .img i:hover {
+    color:  var(--second-color);
+}
+.section-two .content .aside-right .card .img + h3 {
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.section-two .content .aside-right .card .img + h3 + p {
+    padding: 10px 30px;
+    font-size: 18px;
+    color: var(--first-color);
+}
+.section-two .content .aside-right .card .img + h3 + p + p {
+    font-size: 12px;
+    color: var(--first-color);
+    padding: 10px 30px;
+}
+.section-two .content .aside-right .card .img + h3 + p + p span {
+    transition: .5s;
+    cursor: pointer;
+}
+.section-two .content .aside-right .card .img + h3 + p + p span:hover {
+    color: var(--second-color);
+}
+.section-two .content a {
+    margin: 3% auto;
+    display: block;
+    text-align: center;
+    color: var(--first-color);
+    border: 1px solid var(--first-color);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 15px;
+    transition: .5s;
+}
+.section-two .content a:hover {
+    color: #fff;
+    background-color: var(--second-color);
+    border-color: var(--second-color);
+}
+@media (max-width: 991px) {
+    .section-two .content {
+        flex-direction: column;
+    }
+    .section-two .content .aside-left {
+        width: 100%;
+    }
+    .section-two .content .aside-right {
+        width: 100%;
+    }
+    .section-two .content a {
+        width: 20%;
+    }
+}
+@media (max-width: 767px) {
+    .section-two .content {
+        flex-direction: column;
+    }
+    .section-two .content .aside-left {
+        width: 100%;
+    }
+    .section-two .content .aside-right {
+        width: 100%;
+    }
+    .section-two .content a {
+        width: 45%;
+    }
+}
+/* End Section Two  */
+/* Start Footer  */
+.footer {
+    margin-top: var(--margin-top);
+    background-color: #161616;
+}
+.footer .content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.footer .content .basic {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.footer .content .basic .logo {
+    font-family: 'Ubuntu', sans-serif;
+    color:#fff;
+    font-weight: bold;
+    font-size: 23px;
+    margin-bottom: 5%;
+    cursor: pointer;
+}
+.footer .content .basic .copy {
+    color: var(--first-color);
+    font-size: 14px;
+}
+.footer .content .basic .copy span {
+    transition: .5s;
+    cursor: pointer;
+}
+.footer .content .basic .copy span:hover {
+    color: var(--second-color);
+}
+.footer .content ul {
+        width: 30%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.footer .content ul li {
+    width: 30%;
+}
+.footer .content ul li a {
+    color: var(--first-color);
+    font-size: 14px;
+    transition: 0.5s;
+}
+.footer .content ul li a:hover {
+    color: var(--second-color);
+}
+.footer .content .form {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer .content .form h4 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+.footer .content .form .input {
+    position: relative;
+}
+.footer .content .form .input input {
+    width: 100%;
+    border: none;
+    background-color: #161616;
+    color: var(--first-color);
+    padding: 7px;
+    border-bottom: 1px solid var(--first-color);
+}
+.footer .content .form .input i {
+    color: var(--first-color);
+    padding: 7px;
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+@media (max-width: 767px) {
+    .footer .content {
+        flex-direction: column;
+    }
+    .footer .content .basic {
+        width: 100%;
+        margin-bottom: 15%;
+    }
+    .footer .content ul {
+        width: 100%;
+        margin-bottom: 15%;
+    }
+    .footer .content .form {
+        width: 100%;
+        margin-bottom: 15%;
+    }
+}
+/* End Footer  */
